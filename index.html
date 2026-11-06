@@ -114,36 +114,20 @@ footer{border-top:1px solid var(--stroke);color:#c6cad3;font-size:.83rem;padding
 @media(min-width:701px) and (max-height:620px){.hero{min-height:580px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
 
-.drinks-section{background:linear-gradient(140deg,#101a2e 0%,#090e20 68%);border-block:1px solid var(--stroke)}
-.drinks-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.94fr);gap:38px;align-items:center}
-.drinks-copy h2{margin-top:14px;margin-bottom:21px}.drinks-copy h2 em{font-style:normal;color:var(--gold)}
-.drinks-copy p{color:var(--muted);line-height:1.8;max-width:540px;margin:0}
-.drinks-copy .btn{margin-top:26px}
-.drinks-meta{display:flex;gap:9px;align-items:center;color:#dfd2ad;font-size:.86rem;margin-top:22px}
-.drinks-dot{display:inline-block;flex:none;width:7px;height:7px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 5px #dec17c1c}
-.drinks-visual{position:relative;min-height:365px;display:flex;justify-content:center;align-items:center;overflow:hidden;border:1px solid var(--stroke);border-radius:18px;background:radial-gradient(circle at 60% 40%,#31405d,#172238 47%,#101827 81%)}
-.drinks-visual:before{content:"";position:absolute;inset:16px;border:1px solid #dec17c27;border-radius:12px;pointer-events:none}
-.drinks-glass{height:auto;width:min(350px,85%);filter:drop-shadow(0 12px 30px #02071570)}
-.drinks-label{position:absolute;z-index:1;top:28px;left:28px;color:var(--gold);font-size:.63rem;font-weight:700;letter-spacing:.18em}
-.drinks-caption{position:absolute;z-index:1;bottom:20px;left:20px;right:20px;color:#e6d9be;text-align:center;font-size:.73rem}
-@media(max-width:700px){.drinks-layout{grid-template-columns:1fr;gap:26px}.drinks-visual{min-height:300px}.drinks-glass{width:min(290px,83%)}.drinks-copy .btn{width:100%}}
-@media(max-width:390px){.drinks-visual{min-height:255px}.drinks-glass{width:min(260px,80%)}.drinks-label{top:22px;left:22px}}
-
-.drinks-menu{margin-top:42px}
-.drinks-menu-header{display:flex;justify-content:space-between;align-items:end;gap:18px;margin-bottom:18px}
-.drinks-menu-header h3{font:500 clamp(1.55rem,3vw,2.25rem) "Playfair Display",Georgia,serif;margin:0}
-.drinks-menu-header p{margin:0;color:var(--muted);font-size:.9rem}
-.drinks-cards{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:13px}
-.drinks-card{min-width:0;position:relative;padding:24px 17px 20px;border:1px solid var(--stroke);border-radius:15px;background:linear-gradient(150deg,#1a2841,#121a2d 75%);overflow:hidden;min-height:255px}
-.drinks-card-index{font-size:.7rem;letter-spacing:.12em;font-weight:700;color:var(--gold)}
-.drinks-card-icon{font-size:2.4rem;color:#e0bb74;font-family:Georgia,serif;line-height:1.1;margin:18px 0 14px;opacity:.87}
-.drinks-card h4{font-size:1.12rem;line-height:1.2;margin:0 0 12px;font-weight:700;color:var(--text)}
-.drinks-card p{font-size:.85rem;line-height:1.65;color:var(--muted);margin:0}
-.drinks-card p strong{color:var(--text)}
-.drinks-disclaimer{font-size:.77rem;color:#bac0c8;margin:18px 0 0;line-height:1.55}
-@media(max-width:1060px){.drinks-cards{grid-template-columns:repeat(3,minmax(0,1fr))}}
-@media(max-width:700px){.drinks-cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.drinks-card{min-height:228px;padding:19px 15px}.drinks-menu-header{display:block}.drinks-menu-header p{margin-top:7px}.drinks-card-icon{margin:13px 0 10px}.drinks-menu{margin-top:33px}}
-@media(max-width:390px){.drinks-cards{grid-template-columns:1fr}.drinks-card{min-height:0;padding:17px 20px}.drinks-card-icon{display:none}.drinks-card h4{margin-top:10px}}
+.drinks-section{border-block:1px solid var(--stroke);background:linear-gradient(135deg,#131d31,#090e20 75%)}
+.drinks-heading{text-align:center;max-width:650px;margin:0 auto 33px}
+.drinks-heading h2{margin:12px 0 14px}
+.drinks-heading h2 span{color:var(--gold)}
+.drinks-heading p{color:var(--muted);font-size:1rem;line-height:1.6;margin:0}
+.drinks-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;align-items:start}
+.drinks-item{margin:0;min-width:0;background:#101a2a;border:1px solid var(--stroke);border-radius:16px;overflow:hidden}
+.drinks-item img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:center center;background:#1b2436}
+.drinks-item figcaption{position:static;padding:17px 9px 18px;text-align:center;background:none}
+.drinks-item h3{font:600 1rem "DM Sans",system-ui,sans-serif;letter-spacing:.012em;margin:0;color:var(--text)}
+.drinks-footnote{font-size:.77rem;color:var(--muted);margin:19px auto 0;max-width:790px;line-height:1.65;text-align:center}
+@media(min-width:701px) and (max-width:1060px){.drinks-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:700px){.drinks-heading{margin-bottom:26px}.drinks-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.drinks-item{border-radius:13px}.drinks-item figcaption{padding:14px 6px 15px}.drinks-item h3{font-size:.92rem}.drinks-item:last-child{grid-column:1/-1;width:calc((100% - 12px)/2);justify-self:center}}
+@media(max-width:390px){.drinks-grid{gap:9px}.drinks-item:last-child{width:calc((100% - 9px)/2)}.drinks-item h3{font-size:.86rem}}
 </style>
 </head><body><header><div class="wrap nav"><a class="brand" href="#inicio"><img src="assets/logo.webp" alt="Logotipo da Temakeria" decoding="async" width="48" height="48"><span class="wordmark">TEMAKERIA<small>Gastronomia Japonesa</small></span></a><nav class="links" aria-label="Navegação principal"><a href="#sobre">O chef</a><a href="#especialidades">Pratos</a><a href="#drinks">Drinks</a><a href="#galeria">Fotos</a><a class="btn" href="#especialidades">Ver pratos ↗</a></nav></div></header><nav class="mobile-nav" aria-label="Navegação rápida"><a href="#inicio">Início</a><a href="#sobre">O chef</a><a href="#especialidades">Pratos</a><a href="#drinks">Drinks</a></nav><main>
 <section class="hero" id="inicio"><img src="assets/combinado-chef.webp" alt="Combinado de sushis da Temakeria" fetchpriority="high" decoding="async"><div class="wrap"><div class="copy"><span class="eyebrow">Gastronomia japonesa • Santiago, RS</span><h1>Uma nova forma de <em>sentir o sabor.</em></h1><p>Dos clássicos japoneses às criações autorais, descubra combinações que surpreendem no sabor, na textura e na apresentação.</p><div class="actions"><a class="btn fill" href="#sobre">Conheça o chef ↗</a><a class="btn" href="#especialidades">Ver pratos</a></div></div></div></section>
@@ -157,42 +141,18 @@ footer{border-top:1px solid var(--stroke);color:#c6cad3;font-size:.83rem;padding
 <section class="section" id="galeria"><div class="wrap"><span class="eyebrow">Descubra os detalhes</span><h2>Galeria de sabores</h2><div class="gallery"><figure><img loading="lazy" decoding="async" src="assets/especiais.webp" alt="Peças especiais"><figcaption>Peças especiais</figcaption></figure><figure><img loading="lazy" decoding="async" src="assets/poke-salmao.webp" alt="Poke de salmão"><figcaption>Pokes</figcaption></figure><figure><img loading="lazy" decoding="async" src="assets/niguiris.webp" alt="Niguiris"><figcaption>Niguiris</figcaption></figure></div></div></section>
 
 <section class="section drinks-section" id="drinks" aria-labelledby="drinks-heading">
-  <div class="wrap drinks-layout">
-    <div class="drinks-copy">
-      <span class="eyebrow">Para acompanhar cada momento</span>
-      <h2 id="drinks-heading">Drinks <em>&amp;</em> bebidas</h2>
-      <p>Clássicos refrescantes e combinações tropicais para acompanhar sua experiência na Temakeria.</p>
-      <div class="drinks-meta"><span class="drinks-dot" aria-hidden="true"></span> Cinco opções para conhecer</div>
-      <a class="btn" href="#contato">Informações de atendimento ↗</a>
+  <div class="wrap">
+    <div class="drinks-heading">
+      <span class="eyebrow">Refrescância para acompanhar sua experiência</span>
+      <h2 id="drinks-heading">Drinks <span>&amp; bebidas</span></h2>
+      <p>Conheça as opções de drinks da Temakeria.</p>
     </div>
-    <div class="drinks-visual" role="img" aria-label="Ilustração decorativa de uma taça com gelo e uma rodela de cítrico; não representa um item do cardápio">
-      <span class="drinks-label">TEMAKERIA · BEBIDAS</span>
-      <svg viewBox="0 0 360 340" aria-hidden="true" focusable="false" class="drinks-glass">
-        <defs>
-          <linearGradient id="drinksLiquid" x1="0" y1="0" x2="0.8" y2="1"><stop stop-color="#efd698" stop-opacity=".76"/><stop offset="1" stop-color="#a77629" stop-opacity=".5"/></linearGradient>
-          <linearGradient id="drinksLine" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f6e3b0"/><stop offset="1" stop-color="#ac8040"/></linearGradient>
-        </defs>
-        <circle cx="255" cy="63" r="27" fill="none" stroke="#e5c781" stroke-width="5"/><path d="M255 36V90M228 63h54M237 44l36 38M273 44l-36 38" stroke="#e5c781" stroke-width="2.5" opacity=".55"/>
-        <path d="M106 86H254L232 259Q180 292 128 259Z" fill="#ddbc725c" stroke="url(#drinksLine)" stroke-width="5" stroke-linejoin="round"/>
-        <path d="M115 140H245L226 253Q180 279 134 253Z" fill="url(#drinksLiquid)"/>
-        <g fill="none" stroke="#fff2c5" opacity=".58" stroke-width="3"><path d="M134 171l23-9 16 19-18 22-21-10z"/><path d="M187 156l23-9 16 24-23 17-20-13z"/><path d="M166 212l22-16 21 24-18 18-25-8z"/></g>
-        <path d="M175 87l66-72" fill="none" stroke="#ead295" stroke-width="7" stroke-linecap="round"/>
-        <path d="M180 284v24M138 309h84" stroke="#e5c781" stroke-width="4" stroke-linecap="round"/>
-        <g fill="#f5dfac"><circle cx="126" cy="65" r="5"/><circle cx="228" cy="118" r="4"/><circle cx="90" cy="160" r="3"/><circle cx="268" cy="213" r="3"/></g>
-      </svg>
-      <span class="drinks-caption">Ilustração conceitual · fotos dos drinks em breve</span>
-    </div>
-  </div>
-  <div class="wrap drinks-menu" aria-label="Opções de drinks da Temakeria">
-    <div class="drinks-menu-header"><h3>Escolha seu drink</h3><p>Clássicos para diferentes paladares.</p></div>
-    <div class="drinks-cards">
-      <article class="drinks-card"><span class="drinks-card-index" aria-hidden="true">01</span><div class="drinks-card-icon" aria-hidden="true">✳</div><h4>Mojito</h4><p>Frescor e notas cítricas com hortelã, em um clássico conhecido mundialmente.</p></article>
-      <article class="drinks-card"><span class="drinks-card-index" aria-hidden="true">02</span><div class="drinks-card-icon" aria-hidden="true">◈</div><h4>Caipirinha</h4><p>O clássico brasileiro à base de <strong>cachaça</strong>, com perfil cítrico.</p></article>
-      <article class="drinks-card"><span class="drinks-card-index" aria-hidden="true">03</span><div class="drinks-card-icon" aria-hidden="true">◇</div><h4>Caipiroska</h4><p>Uma variação cítrica da caipirinha, preparada com <strong>vodka</strong>.</p></article>
-      <article class="drinks-card"><span class="drinks-card-index" aria-hidden="true">04</span><div class="drinks-card-icon" aria-hidden="true">✦</div><h4>Sakerinha</h4><p>Releitura refrescante do clássico brasileiro, preparada com <strong>sakê</strong>.</p></article>
-      <article class="drinks-card"><span class="drinks-card-index" aria-hidden="true">05</span><div class="drinks-card-icon" aria-hidden="true">◌</div><h4>Piña Colada</h4><p>Um clássico tropical marcado pela combinação de abacaxi e coco.</p></article>
-    </div>
-    <p class="drinks-disclaimer">Apresentações ilustrativas. Receitas, frutas disponíveis e valores devem ser confirmados com a Temakeria. Aprecie com moderação.</p>
+    <div class="drinks-grid"><figure class="drinks-item"><img src="assets/drinks/mojito.webp" loading="lazy" decoding="async" alt="Imagem ilustrativa de mojito com hortelã, gelo e limão" width="832" height="1040"><figcaption><h3>Mojito</h3></figcaption></figure>
+<figure class="drinks-item"><img src="assets/drinks/caipirinha.webp" loading="lazy" decoding="async" alt="Imagem ilustrativa de caipirinha com gelo e limão" width="832" height="1040"><figcaption><h3>Caipirinha</h3></figcaption></figure>
+<figure class="drinks-item"><img src="assets/drinks/caipiroska.webp" loading="lazy" decoding="async" alt="Imagem ilustrativa de caipiroska com gelo e limão" width="832" height="1040"><figcaption><h3>Caipiroska</h3></figcaption></figure>
+<figure class="drinks-item"><img src="assets/drinks/sakerinha.webp" loading="lazy" decoding="async" alt="Imagem ilustrativa de sakerinha com limão" width="832" height="1040"><figcaption><h3>Sakerinha</h3></figcaption></figure>
+<figure class="drinks-item"><img src="assets/drinks/pina-colada.webp" loading="lazy" decoding="async" alt="Imagem ilustrativa de piña colada com abacaxi e coco" width="832" height="1040"><figcaption><h3>Piña Colada</h3></figcaption></figure></div>
+    <p class="drinks-footnote">Fotos ilustrativas. A apresentação das bebidas pode variar. Bebidas alcoólicas destinadas a maiores de 18 anos.</p>
   </div>
 </section>
 <section class="section contact" id="contato"><div class="wrap"><span class="eyebrow">Vamos conversar?</span><h2>Seu próximo favorito pode estar aqui.</h2><p>Descubra as especialidades e acompanhe as novidades da Temakeria.</p><div class="actions"><a class="btn fill" href="#especialidades">Conhecer pratos ↗</a><a class="btn" href="#inicio">Voltar ao início ↑</a></div><p class="note">Para pedidos e informações, entre em contato pelo perfil do Instagram onde você encontrou este site.</p></div></section></main><footer><div class="wrap">TEMAKERIA · Gastronomia Japonesa · Santiago, RS · <span id="year"></span></div></footer><script>document.getElementById('year').textContent=new Date().getFullYear()</script></body></html>
