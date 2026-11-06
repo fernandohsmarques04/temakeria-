@@ -113,9 +113,25 @@ footer{border-top:1px solid var(--stroke);color:#c6cad3;font-size:.83rem;padding
 }
 @media(min-width:701px) and (max-height:620px){.hero{min-height:580px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
+
+.drinks-section{background:linear-gradient(140deg,#101a2e 0%,#090e20 68%);border-block:1px solid var(--stroke)}
+.drinks-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.94fr);gap:38px;align-items:center}
+.drinks-copy h2{margin-top:14px;margin-bottom:21px}.drinks-copy h2 em{font-style:normal;color:var(--gold)}
+.drinks-copy p{color:var(--muted);line-height:1.8;max-width:540px;margin:0}
+.drinks-copy .btn{margin-top:26px}
+.drinks-meta{display:flex;gap:9px;align-items:center;color:#dfd2ad;font-size:.86rem;margin-top:22px}
+.drinks-dot{display:inline-block;flex:none;width:7px;height:7px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 5px #dec17c1c}
+.drinks-visual{position:relative;min-height:365px;display:flex;justify-content:center;align-items:center;overflow:hidden;border:1px solid var(--stroke);border-radius:18px;background:radial-gradient(circle at 60% 40%,#31405d,#172238 47%,#101827 81%)}
+.drinks-visual:before{content:"";position:absolute;inset:16px;border:1px solid #dec17c27;border-radius:12px;pointer-events:none}
+.drinks-glass{height:auto;width:min(350px,85%);filter:drop-shadow(0 12px 30px #02071570)}
+.drinks-label{position:absolute;z-index:1;top:28px;left:28px;color:var(--gold);font-size:.63rem;font-weight:700;letter-spacing:.18em}
+.drinks-caption{position:absolute;z-index:1;bottom:20px;left:20px;right:20px;color:#e6d9be;text-align:center;font-size:.73rem}
+@media(max-width:700px){.drinks-layout{grid-template-columns:1fr;gap:26px}.drinks-visual{min-height:300px}.drinks-glass{width:min(290px,83%)}.drinks-copy .btn{width:100%}}
+@media(max-width:390px){.drinks-visual{min-height:255px}.drinks-glass{width:min(260px,80%)}.drinks-label{top:22px;left:22px}}
 </style>
-</head><body><header><div class="wrap nav"><a class="brand" href="#inicio"><img src="assets/logo.webp" alt="Logotipo da Temakeria" decoding="async" width="48" height="48"><span class="wordmark">TEMAKERIA<small>Gastronomia Japonesa</small></span></a><nav class="links" aria-label="Navegação principal"><a href="#especialidades">Especialidades</a><a href="#galeria">Galeria</a><a href="#sobre">O chef</a><a class="btn" href="#especialidades">Ver pratos ↗</a></nav></div></header><nav class="mobile-nav" aria-label="Navegação rápida"><a href="#inicio">Início</a><a href="#especialidades">Pratos</a><a href="#galeria">Fotos</a><a href="#sobre">O chef</a></nav><main>
-<section class="hero" id="inicio"><img src="assets/combinado-chef.webp" alt="Combinado de sushis da Temakeria" fetchpriority="high" decoding="async"><div class="wrap"><div class="copy"><span class="eyebrow">Gastronomia japonesa • Santiago, RS</span><h1>Uma nova forma de <em>sentir o sabor.</em></h1><p>Dos clássicos japoneses às criações autorais, descubra combinações que surpreendem no sabor, na textura e na apresentação.</p><div class="actions"><a class="btn fill" href="#especialidades">Explorar especialidades ↗</a><a class="btn" href="#sobre">Conheça o chef</a></div></div></div></section>
+</head><body><header><div class="wrap nav"><a class="brand" href="#inicio"><img src="assets/logo.webp" alt="Logotipo da Temakeria" decoding="async" width="48" height="48"><span class="wordmark">TEMAKERIA<small>Gastronomia Japonesa</small></span></a><nav class="links" aria-label="Navegação principal"><a href="#sobre">O chef</a><a href="#especialidades">Pratos</a><a href="#drinks">Drinks</a><a href="#galeria">Fotos</a><a class="btn" href="#especialidades">Ver pratos ↗</a></nav></div></header><nav class="mobile-nav" aria-label="Navegação rápida"><a href="#inicio">Início</a><a href="#sobre">O chef</a><a href="#especialidades">Pratos</a><a href="#drinks">Drinks</a></nav><main>
+<section class="hero" id="inicio"><img src="assets/combinado-chef.webp" alt="Combinado de sushis da Temakeria" fetchpriority="high" decoding="async"><div class="wrap"><div class="copy"><span class="eyebrow">Gastronomia japonesa • Santiago, RS</span><h1>Uma nova forma de <em>sentir o sabor.</em></h1><p>Dos clássicos japoneses às criações autorais, descubra combinações que surpreendem no sabor, na textura e na apresentação.</p><div class="actions"><a class="btn fill" href="#sobre">Conheça o chef ↗</a><a class="btn" href="#especialidades">Ver pratos</a></div></div></div></section>
+<section class="section" style="background:#131d30" id="sobre"><div class="wrap story"><img loading="lazy" decoding="async" src="assets/chef.webp" alt="Igor Mulazzani Dias, chef da Temakeria"><div><span class="eyebrow">Conheça quem está por trás dos sabores</span><h2>Igor Mulazzani Dias</h2><p style="color:var(--gold);font-weight:700;margin-top:-14px">Chef de Sushi · Gastronomia Japonesa</p><p>Com aproximadamente 11 anos de experiência na gastronomia, o chef Igor Mulazzani Dias construiu sua trajetória em diferentes estabelecimentos da Serra Gaúcha e, desde 2020, em Santiago, Rio Grande do Sul.</p><p>À frente da Temakeria, une técnica, criatividade e dedicação no preparo e na apresentação de cada prato, sempre valorizando a qualidade da gastronomia japonesa.</p><p style="color:var(--text);font-weight:600">Nossa missão é transformar cada pedido em uma experiência de sabor, qualidade e cuidado.</p></div></div></section>
 <section class="section" id="especialidades"><div class="wrap"><span class="eyebrow">Nosso universo de sabores</span><h2>Especialidades da casa</h2><p class="intro">Seleções preparadas para diferentes momentos — da tradição às combinações criativas.</p><div class="cards">
 <article class="card"><img loading="lazy" decoding="async" src="assets/combinado-tradicional.webp" alt="Combinado tradicional"><div class="body"><span class="tag">Clássicos</span><h3>Combinados tradicionais</h3><p>Uma seleção de clássicos da culinária japonesa, reunindo diferentes cortes e preparações que valorizam a tradição em cada peça.</p></div></article>
 <article class="card"><img loading="lazy" decoding="async" src="assets/combinado-chef.webp" alt="Combinado do chef"><div class="body"><span class="tag">Criações autorais</span><h3>Combinados do chef</h3><p>Criações que exploram texturas, combinações e apresentações especiais para quem busca uma experiência diferenciada.</p></div></article>
@@ -123,5 +139,33 @@ footer{border-top:1px solid var(--stroke);color:#c6cad3;font-size:.83rem;padding
 </div></div></section>
 <section class="section"><div class="wrap feature"><img loading="lazy" decoding="async" src="assets/sushi-copo.webp" alt="Sushi no copo"><div><span class="eyebrow">Uma experiência diferente</span><h2>Sushi no copo.<br><span style="color:#d8ba70">Sabor em cada camada.</span></h2><p>Arroz, salmão e acompanhamentos em uma apresentação prática e criativa. Uma forma especial de saborear a culinária japonesa.</p><a class="btn" href="#galeria">Explore os sabores ↗</a></div></div></section>
 <section class="section" id="galeria"><div class="wrap"><span class="eyebrow">Descubra os detalhes</span><h2>Galeria de sabores</h2><div class="gallery"><figure><img loading="lazy" decoding="async" src="assets/especiais.webp" alt="Peças especiais"><figcaption>Peças especiais</figcaption></figure><figure><img loading="lazy" decoding="async" src="assets/poke-salmao.webp" alt="Poke de salmão"><figcaption>Pokes</figcaption></figure><figure><img loading="lazy" decoding="async" src="assets/niguiris.webp" alt="Niguiris"><figcaption>Niguiris</figcaption></figure></div></div></section>
-<section class="section" style="background:#131d30" id="sobre"><div class="wrap story"><img loading="lazy" decoding="async" src="assets/chef.webp" alt="Igor Mulazzani Dias, chef da Temakeria"><div><span class="eyebrow">Conheça quem está por trás dos sabores</span><h2>Igor Mulazzani Dias</h2><p style="color:var(--gold);font-weight:700;margin-top:-14px">Chef de Sushi · Gastronomia Japonesa</p><p>Com aproximadamente 11 anos de experiência na gastronomia, o chef Igor Mulazzani Dias construiu sua trajetória em diferentes estabelecimentos da Serra Gaúcha e, desde 2020, em Santiago, Rio Grande do Sul.</p><p>À frente da Temakeria, une técnica, criatividade e dedicação no preparo e na apresentação de cada prato, sempre valorizando a qualidade da gastronomia japonesa.</p><p style="color:var(--text);font-weight:600">Nossa missão é transformar cada pedido em uma experiência de sabor, qualidade e cuidado.</p></div></div></section>
+
+<section class="section drinks-section" id="drinks" aria-labelledby="drinks-heading">
+  <div class="wrap drinks-layout">
+    <div class="drinks-copy">
+      <span class="eyebrow">Para acompanhar cada momento</span>
+      <h2 id="drinks-heading">Drinks <em>&amp;</em> bebidas</h2>
+      <p>Um espaço dedicado às bebidas que acompanham a experiência Temakeria. As opções, fotografias e valores serão adicionados após a confirmação do cardápio.</p>
+      <div class="drinks-meta"><span class="drinks-dot" aria-hidden="true"></span> Cardápio de bebidas em atualização</div>
+      <a class="btn" href="#contato">Informações de atendimento ↗</a>
+    </div>
+    <div class="drinks-visual" role="img" aria-label="Ilustração decorativa de uma taça com gelo e uma rodela de cítrico; não representa um item do cardápio">
+      <span class="drinks-label">TEMAKERIA · BEBIDAS</span>
+      <svg viewBox="0 0 360 340" aria-hidden="true" focusable="false" class="drinks-glass">
+        <defs>
+          <linearGradient id="drinksLiquid" x1="0" y1="0" x2="0.8" y2="1"><stop stop-color="#efd698" stop-opacity=".76"/><stop offset="1" stop-color="#a77629" stop-opacity=".5"/></linearGradient>
+          <linearGradient id="drinksLine" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f6e3b0"/><stop offset="1" stop-color="#ac8040"/></linearGradient>
+        </defs>
+        <circle cx="255" cy="63" r="27" fill="none" stroke="#e5c781" stroke-width="5"/><path d="M255 36V90M228 63h54M237 44l36 38M273 44l-36 38" stroke="#e5c781" stroke-width="2.5" opacity=".55"/>
+        <path d="M106 86H254L232 259Q180 292 128 259Z" fill="#ddbc725c" stroke="url(#drinksLine)" stroke-width="5" stroke-linejoin="round"/>
+        <path d="M115 140H245L226 253Q180 279 134 253Z" fill="url(#drinksLiquid)"/>
+        <g fill="none" stroke="#fff2c5" opacity=".58" stroke-width="3"><path d="M134 171l23-9 16 19-18 22-21-10z"/><path d="M187 156l23-9 16 24-23 17-20-13z"/><path d="M166 212l22-16 21 24-18 18-25-8z"/></g>
+        <path d="M175 87l66-72" fill="none" stroke="#ead295" stroke-width="7" stroke-linecap="round"/>
+        <path d="M180 284v24M138 309h84" stroke="#e5c781" stroke-width="4" stroke-linecap="round"/>
+        <g fill="#f5dfac"><circle cx="126" cy="65" r="5"/><circle cx="228" cy="118" r="4"/><circle cx="90" cy="160" r="3"/><circle cx="268" cy="213" r="3"/></g>
+      </svg>
+      <span class="drinks-caption">Ilustração conceitual · fotos dos drinks em breve</span>
+    </div>
+  </div>
+</section>
 <section class="section contact" id="contato"><div class="wrap"><span class="eyebrow">Vamos conversar?</span><h2>Seu próximo favorito pode estar aqui.</h2><p>Descubra as especialidades e acompanhe as novidades da Temakeria.</p><div class="actions"><a class="btn fill" href="#especialidades">Conhecer pratos ↗</a><a class="btn" href="#inicio">Voltar ao início ↑</a></div><p class="note">Para pedidos e informações, entre em contato pelo perfil do Instagram onde você encontrou este site.</p></div></section></main><footer><div class="wrap">TEMAKERIA · Gastronomia Japonesa · Santiago, RS · <span id="year"></span></div></footer><script>document.getElementById('year').textContent=new Date().getFullYear()</script></body></html>
