@@ -76,11 +76,19 @@ dialog{border:1px solid #dcb87866;border-radius:18px;padding:0;background:#09101
 .gallery-more-link span{font-size:1.2rem}
 .gallery-more-link:hover{filter:brightness(1.09)}
 @media(max-width:700px){.gallery-more{flex-direction:column;align-items:stretch;gap:18px}.gallery-more-link{width:100%;justify-content:space-between}.gallery-more p{font-size:.9rem}}
-.footer-content{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px 24px;text-align:left}
-.footer-credit{color:#b6bdc9;font-size:.81rem}
-.footer-credit a{color:var(--gold);font-weight:700;text-underline-offset:4px;transition:color .2s}
-.footer-credit a:hover,.footer-credit a:focus-visible{color:#f3dba4;text-decoration:underline}
-@media(max-width:700px){.footer-content{flex-direction:column;gap:10px;text-align:center}.footer-credit{font-size:.76rem;line-height:1.7}}
+.site-footer{padding:32px 0}
+.footer-content{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:24px 34px;text-align:left}
+.footer-brand{display:flex;flex-direction:column;gap:7px;line-height:1.5}
+.footer-brand strong{font-size:1.08rem;letter-spacing:.12em;color:var(--gold)}
+.footer-brand>span{font-size:.82rem;color:#b8c1cf}
+.footer-credit{display:flex;flex-direction:column;gap:9px;min-width:0}
+.footer-credit-label{font-size:.72rem;letter-spacing:.12em;font-weight:800;color:#bdc7d4;text-transform:uppercase}
+.footer-credit-link{display:flex;align-items:center;gap:18px;justify-content:space-between;border:1px solid #d8ba7080;background:linear-gradient(130deg,#1e2b40,#121b2c);border-radius:12px;padding:13px 15px;text-decoration:none;transition:background .2s,border-color .2s,transform .2s}
+.footer-credit-link:hover,.footer-credit-link:focus-visible{border-color:#f2d89e;background:#24354e;transform:translateY(-1px)}
+.footer-credit-name{font-size:.99rem;color:#f6e4b7;font-weight:800;line-height:1.35}
+.footer-credit-cta{display:inline-flex;align-items:center;gap:6px;flex:none;background:#d8ba70;color:#10192a;border-radius:7px;padding:9px 12px;font-size:.78rem;font-weight:800;white-space:nowrap}
+@media(max-width:700px){.site-footer{padding:27px 0}.footer-content{flex-direction:column;gap:22px;text-align:center}.footer-brand{align-items:center}.footer-credit{width:100%;max-width:470px}.footer-credit-link{flex-direction:column;gap:11px;align-items:center;padding:17px 14px}.footer-credit-name{font-size:1.04rem}.footer-credit-cta{justify-content:center;width:100%;min-height:43px}}
+@media(max-width:380px){.footer-credit-name{font-size:.97rem}}
 </style>
 </head>
 <body>
@@ -128,7 +136,7 @@ dialog{border:1px solid #dcb87866;border-radius:18px;padding:0;background:#09101
   </div>
  </div>
 </section>
-</main><footer class="site-footer"><div class="shell footer-content"><div class="footer-brand"><strong>TEMAKERIA</strong> · Gastronomia Japonesa · Santiago, RS · <span id="year"></span></div><div class="footer-credit">Desenvolvido por <a href="https://github.com/fernandohsmarques04" target="_blank" rel="noopener noreferrer" aria-label="Perfil GitHub do desenvolvedor Fernando Henrique de Souza Marques">Fernando Henrique de Souza Marques <span aria-hidden="true">↗</span></a></div></div></footer>
+</main><footer class="site-footer"><div class="shell footer-content"><div class="footer-brand"><strong>TEMAKERIA</strong><span>Gastronomia Japonesa · Santiago, RS · <span id="year"></span></span></div><div class="footer-credit"><span class="footer-credit-label">Desenvolvido por</span><a class="footer-credit-link" href="https://github.com/fernandohsmarques04" target="_blank" rel="noopener noreferrer" aria-label="Visitar perfil do desenvolvedor Fernando Henrique de Souza Marques no GitHub"><span class="footer-credit-name">Fernando Henrique de Souza Marques</span><span class="footer-credit-cta">Ver GitHub <span aria-hidden="true">↗</span></span></a></div></div></footer>
 <nav class="mobile-bar" aria-label="Atalhos rápidos"><a href="#inicio">Início</a><a href="#chef">O Chef</a><a href="#sabores">Pratos</a><a href="#contato">Contato</a></nav>
 <dialog id="lightbox" aria-label="Fotografia ampliada"><div class="lightbox-top"><strong id="lightbox-title">Fotografia do prato</strong><button type="button" id="lightbox-close" aria-label="Fechar imagem">✕</button></div><img class="lightbox-image" id="lightbox-image" alt="" src="assets/combinado-chef.webp"><div class="lightbox-caption">Fotografia original fornecida pela Temakeria.</div></dialog>
 <script>
