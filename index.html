@@ -67,6 +67,15 @@ dialog{border:1px solid #dcb87866;border-radius:18px;padding:0;background:#09101
 .contact-order-separator:before,.contact-order-separator:after{content:"";height:1px;background:#d8ba703b;flex:1;min-width:10px}
 .contact-delivery-button{margin-top:0;flex-shrink:0}
 @media(max-width:700px){.contact-order-separator{margin:19px 0 12px}.contact-delivery-button{min-height:54px}}
+
+.gallery-more{margin-top:25px;padding:clamp(18px,3vw,27px);border:1px solid #d8ba7059;border-radius:16px;display:flex;align-items:center;justify-content:space-between;gap:24px;background:linear-gradient(115deg,#1c2c47,#111c31 65%,#0e1829)}
+.gallery-more>div{max-width:590px;min-width:0}
+.gallery-more-kicker{display:block;font-weight:800;font-size:.76rem;letter-spacing:.11em;text-transform:uppercase;color:var(--gold)}
+.gallery-more p{margin:8px 0 0;color:#d1d7e1;line-height:1.6;font-size:.94rem}
+.gallery-more-link{flex:none;display:inline-flex;align-items:center;justify-content:center;gap:15px;min-height:52px;padding:13px 20px;border-radius:10px;background:var(--gold);color:#0a1425;font-weight:800;font-size:.91rem;line-height:1.3;text-align:center}
+.gallery-more-link span{font-size:1.2rem}
+.gallery-more-link:hover{filter:brightness(1.09)}
+@media(max-width:700px){.gallery-more{flex-direction:column;align-items:stretch;gap:18px}.gallery-more-link{width:100%;justify-content:space-between}.gallery-more p{font-size:.9rem}}
 </style>
 </head>
 <body>
@@ -84,7 +93,10 @@ dialog{border:1px solid #dcb87866;border-radius:18px;padding:0;background:#09101
 <button class="gallery-card" type="button" data-category="sushis" data-title="Niguiris" data-src="assets/niguiris.webp" aria-label="Ampliar foto dos niguiris"><img class="sushi" src="assets/niguiris.webp" alt="Niguiris em prato preto" loading="lazy"><span class="gallery-caption"><span class="overline">Sushis</span><strong>Niguiris</strong></span></button>
 <button class="gallery-card" type="button" data-category="especiais" data-title="Peças Especiais" data-src="assets/especiais.webp" aria-label="Ampliar foto das peças especiais"><img class="portrait" src="assets/especiais.webp" alt="Peças especiais de salmão com cobertura" loading="lazy"><span class="gallery-caption"><span class="overline">Especiais</span><strong>Peças especiais</strong></span></button>
 <button class="gallery-card" type="button" data-category="especiais" data-title="Sushi no Copo" data-src="assets/sushi-copo.webp" aria-label="Ampliar foto do sushi no copo"><img class="portrait" src="assets/sushi-copo.webp" alt="Sushi no copo com salmão e arroz" loading="lazy"><span class="gallery-caption"><span class="overline">Especiais</span><strong>Sushi no copo</strong></span></button>
-</div><p class="gallery-note">As fotografias representam pratos da Temakeria. Disponibilidade e composição podem variar.</p></div></section>
+</div><div class="gallery-more">
+  <div><span class="gallery-more-kicker">Quer conhecer mais opções?</span><p>Explore outros itens do cardápio online da Temakeria e confira as opções disponíveis no delivery.</p></div>
+  <a href="https://deliveryinbox.com.br/rs/santiago/temakeria" class="gallery-more-link" target="_blank" rel="noopener noreferrer">Ver mais no cardápio <span aria-hidden="true">↗</span></a>
+</div><p class="gallery-note">As fotografias desta galeria foram fornecidas pela Temakeria. Disponibilidade e composição podem variar.</p></div></section>
 <section class="contact contact-revamp" id="contato" aria-labelledby="contact-title">
  <div class="shell">
   <div class="contact-revamp-head">
