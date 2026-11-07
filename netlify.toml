@@ -1,0 +1,7 @@
+# Temakeria — site estático
+# Netlify: importar este repositório, branch main, sem comando de build.
+[build]
+  publish = "."
+
+[build.environment]
+  NODE_VERSION = "22"
