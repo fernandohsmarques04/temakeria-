@@ -33,6 +33,34 @@ dialog{border:1px solid #dcb87866;border-radius:18px;padding:0;background:#09101
 @media(max-width:700px){body{padding-bottom:calc(70px + env(safe-area-inset-bottom))}.shell{width:min(100% - 34px,550px)}.site-nav{height:66px}.logo-lockup img{width:43px;height:43px}.wordmark{font-size:1.11rem}.wordmark small{font-size:.44rem;letter-spacing:.17em}.nav-links a:not(.nav-cta){display:none}.nav-links .nav-cta{font-size:.74rem;padding:8px 11px}.hero{padding:31px 0 55px}.hero-grid{display:flex;flex-direction:column;gap:27px}.hero-text{width:100%}h1{font-size:clamp(3.05rem,12vw,4.2rem);margin-top:11px}.hero-text p{font-size:.97rem;line-height:1.72}.hero-actions{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:22px}.hero-actions .btn{font-size:.78rem;padding:12px 8px}.hero-aside{margin-top:24px;padding-top:16px;font-size:.68rem}.hero-collage{width:100%;grid-template-rows:248px 130px;gap:9px;padding-right:0}.hero-collage img{border-radius:13px}.photo-stamp{height:78px;width:78px;font-size:.73rem;right:-5px;bottom:110px}.quick-nav{padding:12px 0}.quick-links{gap:9px}.quick-links a{padding:10px 13px;font-size:.75rem}.chef-section{padding:67px 0}.chef-grid{display:flex;flex-direction:column;gap:28px}.chef-image{height:auto;aspect-ratio:4/3;width:100%}.chef-image img{object-position:center 18%}.chef-copy{width:100%}.chef-copy h2{font-size:clamp(2.25rem,10vw,3.2rem)}.chef-copy p{font-size:.95rem;line-height:1.75}.quote{font-size:1.15rem}.showcase{padding:66px 0 73px}.section-intro{display:block}.section-intro p{font-size:.92rem}.filter-row{margin-bottom:8px}.gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.gallery-card,.gallery-card.wide{grid-column:span 1;min-height:260px;border-radius:13px}.gallery-card.tall{min-height:260px}.gallery-card:first-child{grid-column:span 2;min-height:275px}.gallery-caption{bottom:14px;left:13px;right:12px}.gallery-caption strong{font-size:1.25rem}.gallery-card:first-child .gallery-caption strong{font-size:1.55rem}.contact{padding:68px 0}.contact-head{text-align:left}.contact-grid{grid-template-columns:1fr;gap:14px}.contact-panel{padding:26px 22px}.contact-panel h3{font-size:1.85rem}.contact-panel .btn{width:100%}.mobile-bar{display:grid;position:fixed;bottom:0;left:0;right:0;grid-template-columns:repeat(4,1fr);z-index:60;background:#0b1225f8;border-top:1px solid var(--line);padding:8px 7px calc(8px + env(safe-area-inset-bottom));box-shadow:0 -12px 20px #0306106b}.mobile-bar a{font-size:.76rem;min-height:45px;display:flex;align-items:center;justify-content:center;font-weight:800}.mobile-bar a:last-child{color:var(--gold)}.site-footer{padding:25px 14px}}
 @media(max-width:380px){.hero-actions{grid-template-columns:1fr}.gallery-card,.gallery-card.wide{min-height:216px}.gallery-card:first-child{min-height:246px}.gallery-caption strong{font-size:1.12rem}.wordmark{font-size:.98rem}.shell{width:calc(100% - 28px)}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
+/* Redesign da seção de contato — sem alterações nas demais seções */
+.contact.contact-revamp{padding:clamp(65px,8vw,112px) 0;background:radial-gradient(circle at 20% 18%,#20314b 0%,#111b2d 46%,#090e1b 100%);border-top:1px solid var(--line)}
+.contact-revamp-head{display:flex;align-items:end;justify-content:space-between;gap:40px;margin-bottom:34px}
+.contact-revamp-head>div{max-width:700px;min-width:0}
+.contact-revamp-head h2{font-family:'Playfair Display',Georgia,serif;font-weight:500;font-size:clamp(2.25rem,5vw,4.3rem);line-height:1.09;letter-spacing:-.035em;margin:13px 0 0}
+.contact-revamp-head h2 em{color:var(--gold);font-style:normal}
+.contact-revamp-head>p{margin:0 0 5px;max-width:265px;color:#c1cbd9;line-height:1.65;font-size:.97rem}
+.contact-revamp-grid{display:grid;grid-template-columns:1.14fr 1fr;gap:18px}
+.contact-action{border:1px solid #d8ba703c;border-radius:21px;display:flex;flex-direction:column;align-items:flex-start;padding:clamp(25px,3vw,39px);min-width:0;background:#111b2c}
+.contact-action-primary{background:linear-gradient(155deg,#1e3050,#15243e 62%,#101c30);border-color:#d8ba7070;box-shadow:0 18px 48px #0000002b}
+.contact-action-top{display:flex;align-items:center;gap:15px;margin-bottom:23px}
+.contact-action-icon{display:grid;place-items:center;width:54px;height:54px;border:1px solid #dec17c6c;border-radius:16px;color:var(--gold);background:#d8ba7013}
+.contact-index{color:var(--gold);font-weight:800;letter-spacing:.13em;font-size:.71rem}
+.contact-action h3{font-family:'Playfair Display',Georgia,serif;font-weight:500;font-size:clamp(1.75rem,3vw,2.5rem);margin:0 0 12px;letter-spacing:-.025em}
+.contact-action>p{font-size:.95rem;color:#cbd4e0;line-height:1.75;margin:0 0 18px;text-align:left}
+.contact-number{font-size:clamp(1.2rem,2.1vw,1.5rem);font-weight:800;color:#f7e6bd;margin-bottom:24px;letter-spacing:.02em}
+.contact-action address{font-style:normal;font-size:1.15rem;font-weight:600;line-height:1.72;color:#faf8f0;margin:2px 0 18px}
+.contact-action .contact-address-note{font-size:.82rem;color:#bbc5d3}
+.contact-action-button{width:100%;min-height:53px;margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:14px;border-radius:11px;padding:14px 18px;font-size:.96rem;font-weight:800;line-height:1.25}
+.contact-action-button span{font-size:1.35rem;line-height:1}
+.contact-action-button-gold{background:var(--gold);color:#10192a}
+.contact-action-button-outline{border:1px solid var(--gold);color:#f1d79d;background:#e4c7870b}
+.contact-action-button:hover{filter:brightness(1.09)}
+.contact-helper{display:block;margin-top:14px;color:#bcc8d5;font-size:.75rem;line-height:1.55}
+@media(max-width:900px){.contact-revamp-head{display:block}.contact-revamp-head>p{max-width:580px;margin-top:16px}.contact-revamp-grid{grid-template-columns:1fr 1fr}.contact-action{padding:25px}}
+@media(max-width:700px){.contact.contact-revamp{padding:64px 0 77px}.contact-revamp-head{margin-bottom:24px}.contact-revamp-head h2{font-size:clamp(2.3rem,10.4vw,3.4rem)}.contact-revamp-head>p{font-size:.92rem;margin-top:13px}.contact-revamp-grid{grid-template-columns:1fr;gap:14px}.contact-action{padding:25px 22px;border-radius:18px}.contact-action-top{margin-bottom:20px}.contact-action h3{font-size:1.95rem}.contact-action-button{min-height:54px}.contact-number{font-size:1.35rem}}
+@media(max-width:380px){.contact-action{padding:22px 18px}.contact-index{font-size:.65rem}.contact-action-top{gap:11px}.contact-action-icon{height:48px;width:48px}}
 </style>
 </head>
 <body>
@@ -51,7 +79,32 @@ dialog{border:1px solid #dcb87866;border-radius:18px;padding:0;background:#09101
 <button class="gallery-card" type="button" data-category="especiais" data-title="Peças Especiais" data-src="assets/especiais.webp" aria-label="Ampliar foto das peças especiais"><img class="portrait" src="assets/especiais.webp" alt="Peças especiais de salmão com cobertura" loading="lazy"><span class="gallery-caption"><span class="overline">Especiais</span><strong>Peças especiais</strong></span></button>
 <button class="gallery-card" type="button" data-category="especiais" data-title="Sushi no Copo" data-src="assets/sushi-copo.webp" aria-label="Ampliar foto do sushi no copo"><img class="portrait" src="assets/sushi-copo.webp" alt="Sushi no copo com salmão e arroz" loading="lazy"><span class="gallery-caption"><span class="overline">Especiais</span><strong>Sushi no copo</strong></span></button>
 </div><p class="gallery-note">As fotografias representam pratos da Temakeria. Disponibilidade e composição podem variar.</p></div></section>
-<section class="contact" id="contato"><div class="shell"><div class="contact-head"><span class="eyebrow">Venha nos conhecer</span><h2>Contato <em>&amp; localização.</em></h2><p>Na bio do Instagram, a Temakeria está a um toque de distância.</p></div><div class="contact-grid"><div class="contact-panel"><span class="num">01 / ATENDIMENTO</span><h3>Fale com a Temakeria</h3><p>Para tirar dúvidas, consultar o cardápio ou fazer pedidos, envie uma mensagem ao perfil da Temakeria de onde você acessou este site.</p><a href="#inicio" class="btn secondary">Voltar ao início ↑</a><p class="subnote">Link do Instagram e WhatsApp comercial aguardam confirmação.</p></div><div class="contact-panel"><span class="num">02 / ONDE ESTAMOS</span><h3>Santiago, RS</h3><address>Av. Aparício Mariense, 147<br>Vila Nova · Santiago, RS</address><p class="subnote">Este endereço foi localizado em cadastro público e ainda deve ser confirmado com a Temakeria antes da visita.</p><a href="https://www.google.com/maps/search/?api=1&amp;query=Av.%20Apar%C3%ADcio%20Mariense%2C%20147%20Santiago%20RS" target="_blank" rel="noopener noreferrer" class="btn primary">Ver no Google Maps ↗</a></div></div></div></section>
+<section class="contact contact-revamp" id="contato" aria-labelledby="contact-title">
+ <div class="shell">
+  <div class="contact-revamp-head">
+   <div><span class="eyebrow">Fale com a Temakeria</span><h2 id="contact-title">Seu próximo pedido <em>começa aqui.</em></h2></div>
+   <p>Escolha como prefere falar com a gente. Estamos em Santiago, Rio Grande do Sul.</p>
+  </div>
+  <div class="contact-revamp-grid">
+   <article class="contact-action contact-action-primary">
+    <div class="contact-action-top"><span class="contact-action-icon" aria-hidden="true"><svg width="27" height="27" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/><path d="M8.5 9.5c.4 2.1 2.1 3.7 4.1 4.5l1.6-1 1.5 1.2-1.2 2c-3.3.5-7.9-3.9-7.6-7.2l1.1-1.1z"/></svg></span><span class="contact-index">01 / PEDIDOS E ATENDIMENTO</span></div>
+    <h3>Peça pelo WhatsApp</h3>
+    <p>Toque no botão para iniciar uma conversa com uma mensagem de pedido já preparada.</p>
+    <a class="contact-number" href="tel:+5555991698888" aria-label="Ligar para o número 55 99169 8888">(55) 99169-8888</a>
+    <a class="contact-action-button contact-action-button-gold" href="https://wa.me/5555991698888?text=Ol%C3%A1!%20Vim%20pelo%20Instagram%20e%20gostaria%20de%20fazer%20um%20pedido%20na%20Temakeria.%20Poderiam%20me%20informar%20as%20op%C3%A7%C3%B5es%20dispon%C3%ADveis%20e%20como%20fa%C3%A7o%20para%20pedir%3F" target="_blank" rel="noopener noreferrer" aria-label="Iniciar pedido pelo WhatsApp da Temakeria">Iniciar meu pedido <span aria-hidden="true">↗</span></a>
+    <span class="contact-helper">Você poderá editar a mensagem antes de enviar.</span>
+   </article>
+   <article class="contact-action contact-action-location">
+    <div class="contact-action-top"><span class="contact-action-icon" aria-hidden="true"><svg width="27" height="27" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="2.5"/></svg></span><span class="contact-index">02 / ENCONTRE A TEMAKERIA</span></div>
+    <h3>Onde estamos</h3>
+    <address>Av. Aparício Mariense, 147<br>Vila Nova · Santiago, RS</address>
+    <p class="contact-address-note">Endereço localizado em cadastro público. Confirme com a Temakeria antes da visita.</p>
+    <a class="contact-action-button contact-action-button-outline" href="https://www.google.com/maps/search/?api=1&amp;query=Av.%20Apar%C3%ADcio%20Mariense%2C%20147%20Santiago%20RS" target="_blank" rel="noopener noreferrer" aria-label="Consultar endereço no Google Maps">Ver no Google Maps <span aria-hidden="true">↗</span></a>
+    <span class="contact-helper">Consulte o atendimento pelo WhatsApp.</span>
+   </article>
+  </div>
+ </div>
+</section>
 </main><footer class="site-footer"><div class="shell"><strong>TEMAKERIA</strong> · Gastronomia Japonesa · Santiago, RS · <span id="year"></span></div></footer>
 <nav class="mobile-bar" aria-label="Atalhos rápidos"><a href="#inicio">Início</a><a href="#chef">O Chef</a><a href="#sabores">Pratos</a><a href="#contato">Contato</a></nav>
 <dialog id="lightbox" aria-label="Fotografia ampliada"><div class="lightbox-top"><strong id="lightbox-title">Fotografia do prato</strong><button type="button" id="lightbox-close" aria-label="Fechar imagem">✕</button></div><img class="lightbox-image" id="lightbox-image" alt="" src="assets/combinado-chef.webp"><div class="lightbox-caption">Fotografia original fornecida pela Temakeria.</div></dialog>
