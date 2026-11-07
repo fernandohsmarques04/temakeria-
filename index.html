@@ -61,6 +61,12 @@ dialog{border:1px solid #dcb87866;border-radius:18px;padding:0;background:#09101
 @media(max-width:900px){.contact-revamp-head{display:block}.contact-revamp-head>p{max-width:580px;margin-top:16px}.contact-revamp-grid{grid-template-columns:1fr 1fr}.contact-action{padding:25px}}
 @media(max-width:700px){.contact.contact-revamp{padding:64px 0 77px}.contact-revamp-head{margin-bottom:24px}.contact-revamp-head h2{font-size:clamp(2.3rem,10.4vw,3.4rem)}.contact-revamp-head>p{font-size:.92rem;margin-top:13px}.contact-revamp-grid{grid-template-columns:1fr;gap:14px}.contact-action{padding:25px 22px;border-radius:18px}.contact-action-top{margin-bottom:20px}.contact-action h3{font-size:1.95rem}.contact-action-button{min-height:54px}.contact-number{font-size:1.35rem}}
 @media(max-width:380px){.contact-action{padding:22px 18px}.contact-index{font-size:.65rem}.contact-action-top{gap:11px}.contact-action-icon{height:48px;width:48px}}
+
+/* Opção complementar de delivery na seção de contato */
+.contact-order-separator{width:100%;display:flex;align-items:center;gap:11px;color:#bdc8d5;font-size:.76rem;line-height:1.5;margin:20px 0 13px}
+.contact-order-separator:before,.contact-order-separator:after{content:"";height:1px;background:#d8ba703b;flex:1;min-width:10px}
+.contact-delivery-button{margin-top:0;flex-shrink:0}
+@media(max-width:700px){.contact-order-separator{margin:19px 0 12px}.contact-delivery-button{min-height:54px}}
 </style>
 </head>
 <body>
@@ -83,7 +89,7 @@ dialog{border:1px solid #dcb87866;border-radius:18px;padding:0;background:#09101
  <div class="shell">
   <div class="contact-revamp-head">
    <div><span class="eyebrow">Fale com a Temakeria</span><h2 id="contact-title">Seu próximo pedido <em>começa aqui.</em></h2></div>
-   <p>Escolha como prefere falar com a gente. Estamos em Santiago, Rio Grande do Sul.</p>
+   <p>Faça seu pedido pelo WhatsApp ou pelo delivery online. Estamos em Santiago, Rio Grande do Sul.</p>
   </div>
   <div class="contact-revamp-grid">
    <article class="contact-action contact-action-primary">
@@ -92,7 +98,7 @@ dialog{border:1px solid #dcb87866;border-radius:18px;padding:0;background:#09101
     <p>Toque no botão para iniciar uma conversa com uma mensagem de pedido já preparada.</p>
     <a class="contact-number" href="tel:+5555991698888" aria-label="Ligar para o número 55 99169 8888">(55) 99169-8888</a>
     <a class="contact-action-button contact-action-button-gold" href="https://wa.me/5555991698888?text=Ol%C3%A1!%20Vim%20pelo%20Instagram%20e%20gostaria%20de%20fazer%20um%20pedido%20na%20Temakeria.%20Poderiam%20me%20informar%20as%20op%C3%A7%C3%B5es%20dispon%C3%ADveis%20e%20como%20fa%C3%A7o%20para%20pedir%3F" target="_blank" rel="noopener noreferrer" aria-label="Iniciar pedido pelo WhatsApp da Temakeria">Iniciar meu pedido <span aria-hidden="true">↗</span></a>
-    <span class="contact-helper">Você poderá editar a mensagem antes de enviar.</span>
+    <span class="contact-helper">Você poderá editar a mensagem antes de enviar.</span><div class="contact-order-separator"><span>ou faça seu pedido online</span></div><a class="contact-action-button contact-action-button-outline contact-delivery-button" href="https://deliveryinbox.com.br/rs/santiago/temakeria" target="_blank" rel="noopener noreferrer" aria-label="Abrir cardápio e fazer pedido pelo Delivery Inbox">Pedir pelo Delivery Inbox <span aria-hidden="true">↗</span></a>
    </article>
    <article class="contact-action contact-action-location">
     <div class="contact-action-top"><span class="contact-action-icon" aria-hidden="true"><svg width="27" height="27" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="2.5"/></svg></span><span class="contact-index">02 / ENCONTRE A TEMAKERIA</span></div>
