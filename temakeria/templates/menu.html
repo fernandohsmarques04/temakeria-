@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block title %}Cardápio | Temakeria do Igor{% endblock %}
+{% block header %}<a href="{{ url_for('institutional') }}">Conheça a Temakeria</a>{% endblock %}
+{% block content %}
+<main>
+  <div class="menu-hero">
+    <div class="shell hero-inner">
+      <div>
+        <span class="eyebrow">Santiago, RS</span>
+        <h1>Cardápio</h1>
+        <p>Gastronomia japonesa do chef Igor Mulazzani Dias.</p>
+      </div>
+    </div>
+  </div>
+  <div class="shell menu">
+    {% if categories %}
+    <nav class="category-nav" aria-label="Categorias do cardápio">
+      {% for id, category in categories.items() %}
+      <a href="#categoria-{{ id }}">{{ category.name }}</a>
+      {% endfor %}
+    </nav>
+    {% endif %}
+    {% for id, category in categories.items() %}
+    <section class="menu-section" id="categoria-{{ id }}" aria-labelledby="titulo-{{ id }}">
+      <h2 id="titulo-{{ id }}">{{ category.name }}</h2>
+      <div class="menu-grid">
+        {% for product in category.products %}
+        <article class="product-card">
+          {% if product.has_photo %}
+          <img src="{{ url_for('menu_photo', product_id=product.id) }}" alt="{{ product.name }}" loading="lazy" width="640" height="400">
+          {% endif %}
+          <div class="product-copy">
+            <h3>{{ product.name }}</h3>
+            {% if product.description %}<p>{{ product.description }}</p>{% endif %}
+            <strong class="price">{% if product.price_from %}A partir de {% endif %}{{ product.price_cents | brl }}</strong>
+          </div>
+        </article>
+        {% endfor %}
+      </div>
+    </section>
+    {% else %}
+    <p class="empty">Nenhum produto disponível no momento.</p>
+    {% endfor %}
+  </div>
+</main>
+<footer class="shell site-footer">Temakeria do Igor · Santiago, RS</footer>
+{% endblock %}

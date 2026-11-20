@@ -1,0 +1,15 @@
+{% extends "admin_base.html" %}
+{% block title %}Categoria | Temakeria{% endblock %}
+{% block panel %}
+<a class="back" href="{{ url_for('admin.dashboard') }}">← Voltar ao painel</a>
+<div class="panel editor">
+  <h1>{{ "Editar categoria" if category_id else "Nova categoria" }}</h1>
+  {% if error %}<p class="notice error" role="alert">{{ error }}</p>{% endif %}
+  <form class="fields" method="post">
+    <input type="hidden" name="csrf" value="{{ csrf_token() }}">
+    <label>Nome <input name="name" value="{{ category.name }}" maxlength="80" required></label>
+    <label class="check"><input type="checkbox" name="visible" {% if category.visible %}checked{% endif %}> Exibir categoria no cardápio</label>
+    <div><button class="button" type="submit">Salvar categoria</button></div>
+  </form>
+</div>
+{% endblock %}

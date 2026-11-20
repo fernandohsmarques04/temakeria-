@@ -1,0 +1,6 @@
+{% extends "admin_base.html" %}
+{% block panel %}
+<h1>{{ title }}</h1>
+<p>{{ message }}</p>
+<a href="{{ url_for('admin.dashboard') }}">Voltar ao painel</a>
+{% endblock %}
