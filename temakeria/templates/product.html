@@ -1,0 +1,37 @@
+{% extends "admin_base.html" %}
+{% block title %}Produto | Temakeria{% endblock %}
+{% block panel %}
+<a class="back" href="{{ url_for('admin.dashboard') }}">← Voltar ao painel</a>
+<div class="panel editor">
+  <h1>{{ "Editar produto" if product_id else "Novo produto" }}</h1>
+  {% if error %}<p class="notice error" role="alert">{{ error }}</p>{% endif %}
+  <form class="fields" method="post" enctype="multipart/form-data">
+    <input type="hidden" name="csrf" value="{{ csrf_token() }}">
+    <label>Nome <input name="name" value="{{ product.name }}" maxlength="120" required></label>
+    <label>Categoria
+      <select name="category_id" required>
+        <option value="">Selecione</option>
+        {% for category in categories %}
+        <option value="{{ category.id }}" {% if category.id == product.category_id %}selected{% endif %}>{{ category.name }}</option>
+        {% endfor %}
+      </select>
+    </label>
+    <label>Descrição <textarea name="description" maxlength="600" rows="3">{{ product.description }}</textarea></label>
+    <label>Preço (R$) <input name="price" inputmode="decimal" value="{{ product.price }}" maxlength="10" placeholder="29,90" aria-describedby="price-help"></label>
+    <small id="price-help">Para publicar um produto, informe o preço.</small>
+    <label class="check"><input type="checkbox" name="price_from" {% if product.price_from %}checked{% endif %}> Exibir preço como “A partir de”</label>
+    <div class="photo-field">
+      {% if product.has_photo %}
+      <img src="{{ url_for('admin.photo', product_id=product_id) }}" alt="Foto atual do produto" width="180" height="112">
+      {% endif %}
+      <label>{{ "Substituir foto" if product.has_photo else "Foto" }}
+        <input type="file" name="photo" accept="image/jpeg,image/png,image/webp" aria-describedby="photo-help">
+      </label>
+      <small id="photo-help">JPEG, PNG ou WebP de até 8 MB.</small>
+      {% if product.has_photo %}<label class="check"><input type="checkbox" name="remove_photo"> Remover foto atual</label>{% endif %}
+    </div>
+    <label class="check"><input type="checkbox" name="available" {% if product.available %}checked{% endif %}> Disponível no cardápio</label>
+    <div><button class="button" type="submit">Salvar produto</button></div>
+  </form>
+</div>
+{% endblock %}

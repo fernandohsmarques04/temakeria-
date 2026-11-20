@@ -1,0 +1,58 @@
+{% extends "admin_base.html" %}
+{% block title %}Painel do cardápio | Temakeria{% endblock %}
+{% block panel %}
+<h1>Painel do cardápio</h1>
+<div class="dashboard">
+  <div class="catalog">
+    <section class="panel">
+      <div class="section-head">
+        <h2>Categorias</h2>
+        <a class="button" href="{{ url_for('admin.edit_category') }}">Nova categoria</a>
+      </div>
+      <ul class="item-list">
+        {% for category in categories %}
+        <li>
+          <div><strong>{{ category.name }}</strong><small>{{ "Visível" if category.visible else "Oculta" }}</small></div>
+          <a href="{{ url_for('admin.edit_category', category_id=category.id) }}" aria-label="Editar categoria {{ category.name }}">Editar</a>
+        </li>
+        {% else %}
+        <li>Cadastre uma categoria para começar.</li>
+        {% endfor %}
+      </ul>
+    </section>
+    <section class="panel">
+      <div class="section-head">
+        <h2>Produtos</h2>
+        {% if categories %}<a class="button" href="{{ url_for('admin.edit_product') }}">Novo produto</a>{% endif %}
+      </div>
+      <ul class="item-list">
+        {% for product in products %}
+        <li>
+          {% if product.has_photo %}
+          <img class="thumb" src="{{ url_for('admin.photo', product_id=product.id) }}" width="52" height="52" loading="lazy" alt="">
+          {% endif %}
+          <div>
+            <strong>{{ product.name }}</strong>
+            <small>{{ product.category }}{% if product.price_cents is not none %} · {% if product.price_from %}A partir de {% endif %}{{ product.price_cents | brl }}{% endif %}</small>
+            <small>{% if product.available and product.category_visible %}Publicado{% elif product.available %}Categoria oculta{% else %}Indisponível{% endif %}</small>
+          </div>
+          <a href="{{ url_for('admin.edit_product', product_id=product.id) }}" aria-label="Editar produto {{ product.name }}">Editar</a>
+        </li>
+        {% else %}
+        <li>Nenhum produto cadastrado.</li>
+        {% endfor %}
+      </ul>
+    </section>
+  </div>
+  <aside class="panel qr">
+    <h2>QR Code do cardápio</h2>
+    {% if config.MENU_URL %}
+    <img src="{{ url_for('admin.qr') }}" alt="QR Code que abre o cardápio público" width="210" height="210">
+    <a class="button" href="{{ url_for('admin.qr') }}" download="temakeria-cardapio.png">Baixar QR Code</a>
+    <a class="address" href="{{ config.MENU_URL }}">{{ config.MENU_URL }}</a>
+    {% else %}
+    <p>Inicie o servidor com <code>--menu-url</code> e o endereço que os celulares usarão para abrir o cardápio.</p>
+    {% endif %}
+  </aside>
+</div>
+{% endblock %}
